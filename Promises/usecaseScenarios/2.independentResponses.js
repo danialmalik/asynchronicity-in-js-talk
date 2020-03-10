@@ -1,5 +1,5 @@
 const promise1 = new Promise(function (resolve, reject) {
-    setTimeout(() => resolve(10), 2000)
+    setTimeout(() => resolve(10), 1000)
 })
 
 const promise2 = new Promise(function (resolve, reject) {
@@ -18,5 +18,6 @@ Promise.all([promise1, promise2, promise3])
         console.log('Value from promise2, ', val2);
         console.log('Value from promise3, ', val3);
     })
+    .catch(err=>console.error(err))
 
 console.log('After')

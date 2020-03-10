@@ -8,4 +8,5 @@ promise.then(
     val => console.log('Success: ', val),
     error => console.error('Error: ', error)
 )
+// .catch(err=>console.log('caught'));
 console.log('Second');

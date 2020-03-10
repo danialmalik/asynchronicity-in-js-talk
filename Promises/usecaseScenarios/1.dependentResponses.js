@@ -1,19 +1,24 @@
-const promise1 = new Promise(function (resolve, reject) {
+const developer = new Promise(function (resolve, reject) {
     setTimeout(() => resolve(10), 2000)
 })
 
-const promise2 = function (input) {
+const designer = function (input) {
     return new Promise(function (resolve, reject) {
         setTimeout(() => resolve(input * 2), 2000);
     })
 }
 
+// Nested thens
 
-promise1.then(val => {
-    promise2(val).
+developer.then(val => {
+    designer(val).
         then(result => console.log('Final response: ', result))
 })
-// promise1.then(val => {
-//     return promise2(val)
-// })
+
+
+// // outer thens
+
+// developer
+//     .then(val => designer(val))
+//    // .then(val => Promise.resolve(designer(val)))
 //     .then(result => console.log('Final response: ', result))

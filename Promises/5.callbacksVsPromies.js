@@ -15,10 +15,12 @@ asyncCompute(100, function (err, result) {
 // Promises
 const promisedAsyncCompute = function (value) {
     return new Promise(function (resolve, reject) {
-        if (typeof (value) !== 'number') {
-            reject(Error('Number required'));
-        }
-        else setTimeout(() => resolve(value * 10), 2000)
+        setTimeout(() => {
+            if (typeof (value) !== 'number') {
+                reject(Error('Number required'));
+            }
+            else resolve(value * 10);
+        }, 2000);
     })
 }
 promisedAsyncCompute(100)

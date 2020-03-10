@@ -22,14 +22,14 @@ function manager() {
     function handleFailure(error) {
         console.log('Useless employee failed the task! Excuse: ', error.message);
     }
-    employee_task(value, handleSuccess, handleFailure)
+    employeeTask(value, handleSuccess, handleFailure)
 
     console.log('Assigned a task to employee. I\'ll do whatever I want now');
     for (let i = 0; i < 1000000000; i++) { }
     console.log("I got free. Let's see what the employee has done");
 }
 
-function employee_task(value, successCallback, failureCallback) {
+function employeeTask(value, successCallback, failureCallback) {
     if (typeof (value) !== 'number') {
         return setTimeout(() => failureCallback(new Error('Datatype other than number is passed')), 2000);
     }
