@@ -1,5 +1,6 @@
 const promise1 = new Promise(function (resolve, reject) {
     setTimeout(() => resolve(10), 1000)
+    // setTimeout(() => reject(10), 1000)
 })
 
 const promise2 = new Promise(function (resolve, reject) {

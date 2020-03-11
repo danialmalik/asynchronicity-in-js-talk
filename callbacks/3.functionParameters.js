@@ -25,7 +25,7 @@ function manager() {
     employeeTask(value, handleSuccess, handleFailure)
 
     console.log('Assigned a task to employee. I\'ll do whatever I want now');
-    for (let i = 0; i < 1000000000; i++) { }
+    for (let i = 0; i < 5000000000; i++);
     console.log("I got free. Let's see what the employee has done");
 }
 

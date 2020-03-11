@@ -8,17 +8,20 @@ const designer = function (input) {
     })
 }
 
-// Nested thens
 
-developer.then(val => {
-    designer(val).
-        then(result => console.log('Final response: ', result))
-})
+// nested thens
+developer
+    .then(val => {
+        designer(val)
+            .then(result => console.log('Final response: ', result));
+    })
 
 
-// // outer thens
 
-// developer
-//     .then(val => designer(val))
-//    // .then(val => Promise.resolve(designer(val)))
-//     .then(result => console.log('Final response: ', result))
+
+// chained thens
+
+developer
+    .then(val => designer(val))
+    // .then(val => Promise.resolve(designer(val)))
+    .then(result => console.log('Final response: ', result))

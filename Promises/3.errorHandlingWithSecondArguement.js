@@ -8,5 +8,5 @@ promise.then(
     val => console.log('Success: ', val),
     error => console.error('Error: ', error)
 )
-// .catch(err=>console.log('caught'));
+// .catch(err=>console.log('caught')); // if this is present too, will not be executed
 console.log('Second');
